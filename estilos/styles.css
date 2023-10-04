@@ -9,10 +9,21 @@
     --font: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: var(--cor-principal);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -73,7 +84,6 @@ body {
     display: block;
     width: 100vw;
     transition: .3s;
-    z-index: 1999293;
 }
 
 #itens:hover li a {
@@ -140,7 +150,6 @@ body {
 .sec-1 {
     width: 100%;
     height: 100vh;
-    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -327,6 +336,35 @@ body {
     display: none;
 }
 
+.onda3 {
+    width: 100%;
+    height: 88px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../imagens/onda.png) no-repeat;
+    background-size: contain;
+}
+
+.onda4 {
+    width: 50%;
+    height: 86px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(../imagens/onda.png) no-repeat;
+    background-size: contain;
+    display: none;
+}
+
+@keyframes imagem2 {
+    0% {
+        transform: translate(-50%, -40%);
+    }
+    100% {
+        transform: translate(-49.2%, -39.2%);
+    }
+}
 
 .sec-3-img img{
     width: 300px;
@@ -338,6 +376,7 @@ body {
     transform: translate(-50%, -40%);
     opacity: .5;
     z-index: 1;
+    animation: imagem 0.5s ease-in-out infinite alternate;
 }
 
 /* FOOTER */
@@ -370,10 +409,20 @@ body {
     font-size: 10px;
 }
 
+.footer section:nth-child(2) p a {
+    color: black;
+    transition: .2s;
+}
+
+.footer section:nth-child(2) p a:hover {
+    color: rgb(255, 255, 255);
+}
+
 .footer-logo {
     width: 100px;
     height: 100px;
 }
+
 
 .footer-logo img {
     width: 100%;
