@@ -18,8 +18,6 @@
 body {
     font-family: var(--font);
 }
-
-
 /* HEADER */
 
 .header {
@@ -30,6 +28,7 @@ body {
     align-items: center;
     justify-content: space-around;
     transition: .5s;
+    z-index: 999;
 }
 
 .header-logo img {
@@ -47,23 +46,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 66px;
     left: 0;
-    width: 100%;
     height: 0;
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.33);
     overflow: hidden;
-    z-index: -1;
+    z-index: 9999;
     transition: .5s;
     list-style: none;
 }
 
 #itens.abrir-menu {
     visibility: visible;
-    height: 100vh;
+    height: 200px;
 }
 
 #itens li a{
@@ -76,6 +73,7 @@ body {
     display: block;
     width: 100vw;
     transition: .3s;
+    z-index: 1999293;
 }
 
 #itens:hover li a {
@@ -84,7 +82,7 @@ body {
 
 #itens li a:hover {
     transform: scale(1.1);
-    color: var(--cor-escura);
+    color: white;
     text-shadow: 0px 0px 10px white;
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 1;
@@ -110,14 +108,14 @@ body {
     position: relative;
     transform-origin: center;
     transition: 0.5s;
-    z-index: 5;
+    z-index: 1000;
 }
 
 
 #burguer.animacao-menu .linha:nth-child(1){
     transform: translateY(9px) rotate(-45deg);
-    background-color: var(--cor-escura);
-    box-shadow: 0px 0px 7px var(--cor-escura);
+    background-color: var(--cor-principal);
+    box-shadow: 0px 0px 7px var(--cor-principal);
 }
 
 #burguer.animacao-menu .linha:nth-child(2) {
@@ -126,8 +124,8 @@ body {
 
 #burguer.animacao-menu .linha:nth-child(3) {
     transform: translateY(-9px) rotate(45deg);
-    background-color: var(--cor-escura);
-    box-shadow: 0px 0px 7px var(--cor-escura);
+    background-color: var(--cor-principal);
+    box-shadow: 0px 0px 7px var(--cor-principal);
 }
 
 .rolagem {
@@ -146,9 +144,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: black url(../imagens/fundo.png) center left no-repeat fixed;
-    background-size: cover;
-
+    background-image: linear-gradient(to left, #1b1b1b 0%, black 100%);
 }
 
 .article-sec-1 {
@@ -182,23 +178,48 @@ body {
     margin-bottom: 30px;
 }
 
-.sec-1-btn {
-    cursor: pointer;
-    width: 200px;
-    height: 70px;
-    border-radius: 20px;
-    border: none;
-    background-color: var(--cor-principal);
-    font-size: 20px;
-    font-weight: 600;
-    color: #133524;
-    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.418);
-    transition: .2s;
-    box-shadow: 0px 0px 10px black;
+.btn {
+  background-color: transparent;
+  border: 1px solid var(--cor-principal);
+  border-radius: 8px;
+  color: var(--cor-principal);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+  transition: .5s;
 }
 
-.sec-1-btn:hover {
+.btn:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.btn:active {
+  background-color: #000000;
+}
+
+.btn:hover {
     transform: scale(1.05);
+    box-shadow: 0px 0px 5px 5px var(--cor-principal);
+}
+
+.header-btn {
+    display: none;
+}
+
+.footer-btn {
+    border: none;
+    background-color: #000000;
+    color: var(--cor-principal);
 }
 
 /* SEC 2 */
@@ -210,34 +231,36 @@ body {
     flex-wrap: wrap;
     width: 100%;
     padding: 65px 30px;
+    padding-bottom: 0px;
     gap: 50px;
+    background-color: #C5D7A7;
 }
 
 /* SEC 2 CARDS */
 
 .card-comentarios {
-    width: 300px;
+    max-width: 300px;
     height: 400px;
     border-radius: 20px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.39);
+    box-shadow: -5px -10px 10px rgba(0, 0, 0, 0.2);
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    background-color: white;
 }
 
 .card-comentarios div {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position: relative;
 }
 
 .card-comentarios div img{
-    position: absolute;
     width: 100%;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .card-comentarios p {
@@ -246,12 +269,113 @@ body {
 }
 
 
-
+/* SEC 3 */
 
 .sec-3 {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, #1b1b1b 0%, black 100%);
+}
+
+.article-sec-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.article-sec-3 h1 {
+    font-size: 2.5em;
+    color: var(--cor-principal);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.308);
+    z-index: 2;
+    text-shadow: 3px 2px 5px black;
+}
+
+.article-sec-3 p {
+    width: 70vw;
+    max-width: 350px;
+    color: white;
+    font-size: 1em;
+    text-align: justify;
+    z-index: 2;
+    text-shadow: 3px 2px 5px black;
+}
+
+.onda {
+    width: 100%;
+    height: 200px;
+    transform: scaleX(-1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../imagens/onda-cima.png) no-repeat;
+    background-size: contain;
+}
+
+.onda2 {
+    width: 50%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../imagens/onda-cima.png) no-repeat;
+    background-size: contain;
     display: none;
 }
 
+
+.sec-3-img img{
+    width: 300px;
+    height: 300px;
+    transform: scaleX(-1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    opacity: .5;
+    z-index: 1;
+}
+
+/* FOOTER */
+
 .footer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer section {
+    width: 100%;
+    height: 120px;
+    background-color: var(--cor-principal);
+}
+
+.footer section:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+}
+
+.footer section:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer section:nth-child(2) p {
+    font-size: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-logo img {
+    width: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.514));
 }
