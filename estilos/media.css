@@ -37,24 +37,28 @@
 
     .sec-1-img {
         display: block;
-        animation: imagem 0.5s ease-in-out infinite alternate;
+        animation: imagem2 1.5s ease-in-out infinite alternate;
     }
 
     .sec-1-img img {
         width: 300px;
-        max-width: 400px;
     }
 
     .ond {
         display: none;
     }
 
-    @keyframes imagem {
+    .sec-2 {
+        padding-bottom: 65px;
+    }
+
+    @keyframes imagem2 {
         0% {
-            transform: translate(-50%, -40%);
+            transform: translateY(-5px);
         }
+
         100% {
-            transform: translate(-49.2%, -39.2%);
+            transform: translateY(5px);
         }
     }
     
@@ -65,10 +69,16 @@
         transform: scale(1);
         position: sticky;
         opacity: 1;
-        animation: none;
+        animation: imagem2 1.5s ease-in-out infinite alternate;
     }
 
     .sec-3 {
         justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .sec-1-img img {
+        width: 450px;
     }
 }
