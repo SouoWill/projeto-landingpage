@@ -8,3 +8,10 @@ function clickMenu(){
     const btn = document.getElementById('burguer')
     btn.classList.toggle('animacao-menu')
 }
+
+// HEADER FIXED
+
+window.addEventListener('scroll', function(){
+    let header = document.querySelector('.header')
+    header.classList.toggle('rolagem',window.scrollY > 500)
+})
