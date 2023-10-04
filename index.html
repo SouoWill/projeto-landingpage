@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="estilos/media.css">
 </head>
 <body>
-    <header class="header" id="inicio">
+    <header class="header">
         <div class="header-logo"><img src="imagens/logo.png" alt="Logo - Tip Fitness Brasil"></div>
         <nav class="header-nav">
             <button id="burguer" onclick="clickMenu()">
@@ -24,10 +24,10 @@
                 <li><a href="#sobre">Sobre o livro</a></li>
             </ul>
         </nav>
-        <button class="header-btn btn">Adquira já!</button>
+        <button class="header-btn btn" role="button">Adquira já!</button>
     </header>
     <main class="main">
-        <section class="sec-1">
+        <section class="sec-1" id="inicio">
             <article class="article-sec-1">
                 <h1>Bulking e cutting</h1>
                 <h2>Sem gastar fortunas</h2>
@@ -40,33 +40,34 @@
                 <img src="imagens/homem.png" alt="Imagem ilustrada de um homem">
             </figure>
         </section>
-
         <section class="sec-2">
             <article class="card-comentarios">
                 <div><img src="imagens/pessoa1.jpeg" alt=""></div>
                 <h1>Thayna Sena</h1>
                 <p>Este eBook sobre comida para ganho e perda de peso é simplesmente incrível! Entrei na academia e sigo as dicas do livro a 6 meses e já ganhei 10kg!! Recomendo a todos que buscam alcançar seus objetivos fitness.</p>
             </article>
-
+    
             <article class="card-comentarios">
                 <div><img src="imagens/pessoa2.jpeg" alt=""></div>
                 <h1>Suelia da Silva</h1>
                 <p>Não consigo expressar o quanto estou encantada com este eBook! As estratégias para ganho e perda de peso são fáceis de seguir. Encontrei uma variedade de pratos deliciosos que tornou minha dieta mais fácil.</p>
             </article>
-
+    
             <article class="card-comentarios">
                 <div><img src="imagens/pessoa3.jpeg" alt=""></div>
-                <h1>Victor de Carvalho</h1>
+                <h1>Victor Carvalho</h1>
                 <p>Que achado maravilhoso! Este eBook é uma verdadeira jóia. As estratégias são esclarecedoras e as receitas são simplesmente divinas. Recomendo a todos que buscam uma maneira mais fácil de seguir uma dieta.</p>
             </article>
         </section>
-
-        <section class="sec-3">
+        
+        <section class="sec-3" id="sobre">
+            <div class="onda"></div>
+            <div class="onda2"></div>
+            <figure class="sec-3-img"><img src="imagens/capa-livro.png" alt="Capa do eBook"></figure>
             <article class="article-sec-3">
                 <h1>Sobre o eBook</h1>
                 <p>Este eBook contem: +68  cardápios de refeições, +20 receitas baratas e proteicas, +14 Recomendações de comidas, dicas sobre suplementação e muito mais!! Transforme seu corpo de forma acessível! O eBook traz estratégias para ganho de massa e perca de peso/gordura com alimentos de baixo custo. </p>
             </article>
-            <figure class="sec-3-img"><img src="imagens/capa-livro.png" alt="Capa do eBook"></figure>
         </section>
     </main>
     <footer class="footer">
@@ -78,8 +79,9 @@
                 © Copyright 2023 | Tip Fitness Brasil <br>
                 Todos os direitos reservados.
             </p>
+            <a href="#"><button class="footer-btn btn" role="button">Adquira já!</button></a>
             <p>
-                Feito cuidadosamente por <a href="#">Juan William</a>
+                Feito cuidadosamente por <br> <a href="#">Juan William</a>
             </p>
         </section>
     </footer>
