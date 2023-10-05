@@ -50,6 +50,10 @@ body {
     display: none;
 }
 
+.header a {
+    display: none;
+}
+
 /* HEADER NAVEGAÇÃO */
 
 #itens {

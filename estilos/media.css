@@ -40,6 +40,10 @@
         display: block;
     }
 
+    .header a {
+        display: block;
+    }
+
     .sec-1-img {
         display: block;
         animation: imagem2 1.5s ease-in-out infinite alternate;
