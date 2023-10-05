@@ -26,9 +26,14 @@
         color: white;
         width: auto;
         transition: .3s;
+        padding: 10px;
     }
     #itens li a:hover {
         background-color: transparent;
+    }
+
+    .rolagem {
+        height: 70px;
     }
 
     .header-btn {
@@ -42,10 +47,6 @@
 
     .sec-1-img img {
         width: 300px;
-    }
-
-    .sec-2 {
-        padding-bottom: 65px;
     }
 
     @keyframes imagem2 {

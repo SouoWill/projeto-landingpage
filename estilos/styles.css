@@ -167,7 +167,7 @@ body {
 }
 
 .article-sec-1 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: var(--cor-principal);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.308);
 }
@@ -240,7 +240,6 @@ body {
     flex-wrap: wrap;
     width: 100%;
     padding: 65px 30px;
-    padding-bottom: 0px;
     gap: 50px;
     background-color: #C5D7A7;
 }
@@ -358,6 +357,7 @@ body {
 .footer section:nth-child(2) {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
