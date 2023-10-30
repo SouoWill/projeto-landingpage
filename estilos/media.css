@@ -23,7 +23,8 @@
         font-size: 1em;
         font-weight: 400;
         text-decoration: none;
-        color: white;
+        color: var(--cor-intermediaria);
+        text-shadow: 0px 0px 2px  rgb(255, 255, 255);
         width: auto;
         transition: .3s;
         padding: 10px;
@@ -44,23 +45,41 @@
         display: block;
     }
 
-    .sec-1-img {
+    .imagem-capa-sec-1 {
         display: block;
         animation: imagem2 1.5s ease-in-out infinite alternate;
     }
 
-    .sec-1-img img {
-        width: 300px;
+    .imagem-capa-sec-1 {
+        max-width: 250px;
+    }
+
+    .capa-cell {
+        display: none;
+    }
+
+    .sec-1 {
+        width: 100%;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
     }
 
     @keyframes imagem2 {
         0% {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         100% {
-            transform: translateY(5px);
+            transform: translateY(2px);
         }
+    }
+
+    .sec-2 {
+        align-items: center;
     }
     
     .sec-3-img img{
@@ -73,13 +92,19 @@
         animation: imagem2 1.5s ease-in-out infinite alternate;
     }
 
-    .sec-3 {
-        justify-content: space-around;
+    .cards-container-sec-3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .sec-1-img img {
+    .imagem-homem-sec-1 img {
         width: 450px;
     }
 }
