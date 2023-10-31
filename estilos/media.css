@@ -104,6 +104,17 @@
 }
 
 @media screen and (min-width: 900px) {
+    .sec-2 {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .sec-2 img {
+        display: none;
+    }
+    .sec-3 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     .imagem-homem-sec-1 img {
         width: 450px;
     }
